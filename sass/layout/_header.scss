@@ -1,0 +1,44 @@
+.header {
+  background-color: $color-primary--lightest;
+  .navigation {
+    padding: 3.2rem 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-box {
+      .logo {
+        width: 18rem;
+      }
+    }
+    .navigation-list {
+      list-style: none;
+      display: flex;
+      gap: 3.2rem;
+      align-items: center;
+      .navigation-item {
+        & a {
+          display: inline-block;
+        }
+        font-size: 1.8rem;
+        & a:link,
+        & a:visited {
+          transition: all 0.3s;
+          font-weight: 600;
+          text-decoration: none;
+          color: $color-grey--dark;
+        }
+        & a:hover,
+        & a:active {
+          color: $color-primary--dark;
+        }
+        &:last-child a {
+          @include cta-btn;
+        }
+      }
+    }
+  }
+}
+
+// - Spacing system (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+// */
